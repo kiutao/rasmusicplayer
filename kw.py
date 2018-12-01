@@ -25,7 +25,7 @@ def main(argv):
         elif opt in ("--num"):
             number = int(arg)
 
-    shtml = r'http://search.kuwo.cn/r.s?all=%s&ft=music&itemset=web_2013&client=kt&pn=0&rn=5&rformat=json&encoding=utf8'%(searchname)
+    shtml = r'http://search.kuwo.cn/r.s?all=%s&ft=music&itemset=web_2013&client=kt&pn=0&rn=10&rformat=json&encoding=utf8'%(searchname)
     html = urllib2.urlopen(shtml)
     html = html.read()   #句柄转化成字符串处理
     html = html.replace("'", '"')  #解决酷我返回JSON与标准不一致的问题，将'替换为"
