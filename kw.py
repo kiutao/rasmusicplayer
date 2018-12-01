@@ -43,7 +43,6 @@ def main(argv):
         shtml = r'http://antiserver.kuwo.cn/anti.s?type=convert_url&rid=%s&format=mp3&response=url'%(songid)
         html = urllib2.urlopen(shtml)
         url = html.read()
-        print url
         print '\n\033[1;36;40m'+str(number)+'.歌名：%s \n  歌手：%s \n  专辑：%s \033[0m'%(name,singer,album)
         a = 'mpg123 -C %s'%(url)
         print '\n\033[5;31;40m♪♪\033[0m\033[0;31;40m正在播放第'+ str(number)+'首曲目\033[0m\033[5;31;40m♪♪\033[0m'
